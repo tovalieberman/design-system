@@ -1,0 +1,91 @@
+{
+  "extends": "react-app",
+  "rules": {
+ 
+    // one stateful component per file
+    "react/no-multi-comp": ["warn", { "ignoreStateless": true }],
+ 
+    // if component has state, prefer "extends React.component" over "React.createClass"
+    "react/prefer-es6-class":  ["warn"],
+ 
+    // if there is no state in the component, prefer normal function over arrow functions or classes
+    "react/prefer-stateless-function":["warn"],
+ 
+    // filename extension should be jsx
+    "react/jsx-filename-extension": ["warn", { "extensions": [".jsx"] }],
+ 
+    // PascalCase for user-defined JSX components
+    "react/jsx-pascal-case": ["warn"],
+ 
+     // Enhance readability by consistent bracket and tag locations
+     "react/jsx-closing-bracket-location": ["warn"],
+     "react/jsx-closing-tag-location": ["warn"],
+ 
+     // Always use double quotes (" ") for JSX attributes, but single quotes (' ') for all other JS
+     "jsx-quotes": ["warn"],
+ 
+     // Always include a single space in your self-closing tag
+     "no-multi-spaces": ["warn"],
+     "react/jsx-tag-spacing": ["warn"],
+ 
+     // Do not pad JSX curly braces with spaces
+     "react/jsx-curly-spacing": ["warn"],
+ 
+     // camelCase for props
+     "camelcase": ["warn"],
+ 
+     // omit prop value when it is true
+     "react/jsx-boolean-value": ["warn"],
+ 
+     // Always include an alt prop on <img> tags. If the image is presentational, alt can be an empty string or the <img> must have role="presentation"
+     "jsx-a11y/alt-text": ["warn"],
+ 
+     // Do not use redundant words like "image", "photo", or "picture" in <img> alt props. Screenreaders already do that
+     "jsx-a11y/img-redundant-alt": ["warn"],
+ 
+     // Use only valid, non-abstract ARIA roles (example div role="button" is good but div role="range" is bad)  
+     "jsx-a11y/aria-role": ["warn"],      
+ 
+     // Do not use accessKey on elements (to avoid inconsistencies between screenreaders and keyboards)
+     "jsx-a11y/no-access-key": ["warn"],
+ 
+     // Avoid using an array index as key prop, prefer a stable ID. This way when order of elements change its not a surprise
+     "react/no-array-index-key": ["warn"],
+     
+     // Always define explicit defaultProps for all non-required props
+     "react/require-default-props": ["warn"],
+    
+    // Always use ref callbacks
+    "react/no-string-refs": ["warn"],
+ 
+    // Wrap JSX tags in parentheses when they span more than one line
+    "react/jsx-wrap-multilines": ["warn"],
+ 
+    // Always self-close tags that have no children
+    "react/self-closing-comp": ["warn"],
+ 
+    // Bind event handlers for the render method in the constructor (if we do this in the render method we create a new handler on every single render invocation)
+    "react/jsx-no-bind": ["warn"],
+ 
+    // Return a value in your render methods
+    "react/require-render-return": ["warn"],
+ 
+    // Do not use isMounted(). its going to be deprecated and is an anti-pattern
+    "react/no-is-mounted": ["warn"],
+    
+    // Prevent missing props validation in a React component definition
+    "react/prop-types": ["warn"],
+ 
+    // Enforce consistent indentation
+    "indent": ["warn", 2],
+ 
+    // Enforce consistent linebreak style       
+    "linebreak-style": ["error","unix"],
+ 
+    // enforce the consistent use of quotes
+    "quotes": ["warn","single"],
+ 
+    // require semicolons instead of ASI (automatic semicolon insertion)
+    "semi": ["warn","always"]
+  }
+}

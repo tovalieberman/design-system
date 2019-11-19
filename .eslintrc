@@ -1,0 +1,10 @@
+{  
+  "extends": "react-app",
+  "rules": {
+    "react/prop-types": ["off"],
+    "indent": ["warn", 2],
+    "linebreak-style": ["error","unix"],
+    "quotes": ["warn","single"],
+    "semi": ["warn","always"]
+  }
+}

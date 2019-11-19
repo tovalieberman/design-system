@@ -1,0 +1,11 @@
+---
+ PARAMETERS:
+   COMMIT_ID: "HEAD"
+   APP_NAME: "design-system"
+   RUN_TYPE: "apply"
+   ENVIRONMENT: "dev"
+   DEPLOYMENT_REGION: "us-east-1"
+   EPHEMERAL: false
+   BUILD_ONLY: false
+ ENVIRONMENT_VARIABLES:
+   - "ServiceUrl"
